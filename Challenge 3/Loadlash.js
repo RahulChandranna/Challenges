@@ -11,7 +11,8 @@
 # | Rahul C     23-09-2021   1.00    Creation
 # +------------------------------------------------------------------------------------
 
-
+Function Get_Object(Object, Key)
+{
 // Load the full build
 const _ = require('lodash'); 
 
@@ -26,8 +27,9 @@ var object1 = {"x":{"y":{"z":"a"}}};
 
 //Loadlash _.get() function is used to fetch the values here based on the inputs
 console.log("Result at 'x/y/z': ",_.get(object1, 'x.y.z'));
+}
 
-
+Get_Object(Object, Key)
 
 //Have this in head section of your website
 //<script scr="https://cdn.jsdelivr.net/npm/lodash@4.17.10/lodash.min.js"></script>
