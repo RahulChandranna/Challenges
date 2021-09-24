@@ -11,9 +11,11 @@
 # | Rahul C     23-09-2021   1.00    Creation
 # +------------------------------------------------------------------------------------
 
-
+#Function to pass parameters
 Function Get-KPMGValue{
     param( $obj, $key)
+    
+#Convert from json and validate
     Process{
         $hash = $obj | ConvertFrom-Json
         $key.split('/') | % {
@@ -23,6 +25,8 @@ Function Get-KPMGValue{
                 write-error "Invalid key, failed to find - $_"
             }
         }
+        
+ #Returns the result based on inputs
         if($hash.GetType().name -eq "string"){
             $value = $hash
         } Else {
