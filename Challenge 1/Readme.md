@@ -15,4 +15,3 @@ ELB (Internet and the Internal Load balancer)
 Auto Scaling group
 
 Bastion Host
-
